@@ -1,17 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+class Toggle extends React.Component {
+    constructor(props) {
+      super(props);
+  
+      this.state = {
+        buttonOn: false
+    };
+  this.handleClick=this.handleClick.bind(this);
+    }
+  
+    handleClick() {
+      this.setState({buttonOn: !this.state.buttonOn});
+    }
+  
+    render() {
+      return (
+        <button onClick={this.handleClick}>{this.state.buttonOn?'ON':'OFF'}</button>
+      );
+    }
+  }
+  
+  ReactDOM.render(
+    <Toggle />,
+    document.getElementById('root')
+  );
