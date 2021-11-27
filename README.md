@@ -1,5 +1,4 @@
 # Getting Started with Create React App
-https://iremuludirik.github.io/on-off-button-react/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
